@@ -1,0 +1,18 @@
+{
+  "name": "backspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsc src/index.ts",
+    "build": "tsc ./src -d dist --strip-leading-paths",
+    "lint": "lint",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "eslint": "^8",
+    "typescript": "5.7.2",
+    "vitest": "^2.1.5"
+  }
+}
