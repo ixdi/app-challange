@@ -55,11 +55,12 @@ const config = {
         'conf', // configuration changes
         'container',
         'deps', // Dependency-related changes
+        'design',
         'domain',
         'infra', // Infrastructure-related changes
         'module',
         'server',
-        'service', // application service related changes
+        'appserv', // application service related changes
         'shared',
         'tool',
         'ui',
