@@ -7,6 +7,7 @@
     "dev": "tsx ./src/start.ts",
     "build": "tsc ./src -d dist --strip-leading-paths",
     "lint": "lint",
+    "test": "vitest",
     "test:e2e": "playwright test",
     "test:e2e:report": "playwright show-report",
     "check-types": "tsc --noEmit"
@@ -18,7 +19,10 @@
     "express": "^4.21.1",
     "glob": "^11.0.0",
     "helmet": "^8.0.0",
-    "http-status": "^2.0.0"
+    "http-status": "^2.0.0",
+    "mongodb": "^6.11.0",
+    "uuid": "^11.0.3",
+    "uuid-validate": "^0.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
@@ -27,6 +31,7 @@
     "@types/express": "^5.0.0",
     "@types/node": "^22",
     "@types/supertest": "^6.0.2",
+    "@types/uuid-validate": "^0.0.3",
     "@typescript-eslint/parser": "^8.16.0",
     "eslint": "^9.15.0",
     "globals": "^15.12.0",
