@@ -23,10 +23,11 @@ The solution is writen in Typescript using
   - Testing: Vitest
   - E2E Testing: Playwright
 - Backend: Node.js
-  - Database: MongoDB
+  - Database: MongoDB in local
+    - export MONGODB_URI for another connection
   - Authentication: JWT
   - Testing: Vitest
-  - E2E Testing: Cucumber
+  - E2E Testing: Playwright
 
 ## Architecture
 
@@ -60,14 +61,21 @@ Use the DDD pattern and CQRS with the following layers for each module:
 
 - Server: Contains the server configuration
 - Controllers: Contains the API routes
-- Application: Contains the use cases
-- Domain: Contains the entities and value objects
-- Infrastructure: Contains the database and other external services
+- Contexts: Bounding Contexts
+  - Modules
+    - Application: Contains the use cases
+    - Domain: Contains the entities and value objects
+    - Infrastructure: Contains the database and other external services
 
 ### Improvements
 
 - Use buses for the commands and queries
 - Increment the test coverage
+- Backend
+  - Use events for the domain
+  - Use a database factory
+  - Use a logger
+  - Use cucumber for the e2e tests
 
 ## Thoughts
 
