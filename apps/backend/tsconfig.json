@@ -21,6 +21,12 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@Contexts/*": [
+        "./src/contexts/*"
+      ],
+      "@Shared/*": [
+        "./src/contexts/Shared/*"
       ]
     }
   },
