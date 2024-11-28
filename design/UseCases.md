@@ -7,8 +7,11 @@ All use cases requires an authenticated user.
 - Restricted to authenticated users
 
 - GetProductsList
+  - Required fields: ``
 - GetOrderById
+  - Required fields: `orderId`
 - GetOrdersList
+  - Required fields: `userId`
 
 ## Commands
 
