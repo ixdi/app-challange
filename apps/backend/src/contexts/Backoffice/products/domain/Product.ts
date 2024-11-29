@@ -10,25 +10,16 @@ export class Product extends AggregateRoot {
   readonly description: ProductDescription;
   readonly price: ProductPrice;
 
-  constructor(productId: ProductId, name: ProductName, description: ProductDescription, price: ProductPrice) {
+  constructor(plainData: { productId: string, name: string, description: string, price: number }) {
     super();
-    this.productId = productId;
-    this.name = name;
-    this.description = description;
-    this.price = price;
+    this.productId = new ProductId(plainData.productId);
+    this.name = new ProductName(plainData.name);
+    this.description = new ProductDescription(plainData.description);
+    this.price = new ProductPrice(plainData.price);
   }
 
-  static create(productId: ProductId, name: ProductName, description: ProductDescription, price: ProductPrice): Product {
-    const course = new Product(productId, name, description, price);
-    return course;
-  }
   static fromPrimitives(plainData: { productId: string; name: string; description: string, price: number }): Product {
-    return new Product(
-      new ProductId(plainData.productId),
-      new ProductName(plainData.name),
-      new ProductDescription(plainData.description),
-      new ProductPrice(plainData.price)
-    );
+    return new Product(plainData);
   }
 
   toPrimitives(): object {

@@ -1,6 +1,6 @@
 import { StringValueObject } from '@Shared/domain/value-object/StringValueObject';
 
-export class ProductName extends StringValueObject {
+export class UserName extends StringValueObject {
   constructor(value: string) {
     super(value);
     this.ensureLengthIsLessThan30Characters(value);
@@ -8,7 +8,7 @@ export class ProductName extends StringValueObject {
 
   private ensureLengthIsLessThan30Characters(value: string): void {
     if (value.length > 30) {
-      throw new Error(`The Product Name <${value}> has more than 30 characters`);
+      throw new Error(`The User Name <${value}> has more than 30 characters`);
     }
   }
 }
